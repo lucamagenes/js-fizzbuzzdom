@@ -14,15 +14,27 @@
 
 let list = document.querySelector(".list")
 
+let element;
+
+
 
 for (let i = 1; i <= 100; i++) {
 
-    console.log(i);
-    const element = `<li class="box"> ${i} </li>`;
+    if (i % 15 == 0) {
+        element = `<li class="box fizzbuzz"> fizzbuzz </li>`;
 
-    list.innerHTML += element
-    //list.insertAdjacentHTML("beforeend", element);
+    } else if (i % 3 == 0) {
+        element = `<li class="box fizz"> fizz </li>`;
 
+    } else if (i % 5 == 0) {
+        element = `<li class="box buzz"> buzz </li>`;
+
+    } else {
+        element = `<li class="box"> ${i} </li>`;
+
+    }
+
+    list.innerHTML += element;
 }
 
 
@@ -35,16 +47,6 @@ for (let i = 1; i <= 100; i++) {
 -assegno a questi elementi uno stile differente
 
 */
-
-for (let i = 3; i <= 100; i = i + 3) {
-
-    console.log(i);
-    const element = `<li class="box fizz"> ${i} </li>`;
-
-    list.innerHTML += element
-    //list.insertAdjacentHTML("beforeend", element);
-
-}
 
 
 
@@ -59,17 +61,6 @@ for (let i = 3; i <= 100; i = i + 3) {
 
 */
 
-for (let i = 5; i <= 100; i = i + 5) {
-
-    console.log(i);
-    const element = `<li class="box buzz"> ${i} </li>`;
-
-    list.innerHTML += element
-    //list.insertAdjacentHTML("beforeend", element);
-
-}
-
-
 
 
 //stile differente per i valori multipli di 3 e di 5
@@ -81,13 +72,3 @@ for (let i = 5; i <= 100; i = i + 5) {
 -assegno a questi elementi uno stile differente
 
 */
-
-for (let i = 15; i <= 100; i = i + 15) {
-
-    console.log(i);
-    const element = `<li class="box fizzbuzz"> ${i} </li>`;
-
-    list.innerHTML += element
-    //list.insertAdjacentHTML("beforeend", element);
-
-}
