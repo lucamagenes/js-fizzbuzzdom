@@ -8,7 +8,21 @@
 
 -creo loop di elementi da 1 a 100
 
+-assegnazione di uno stile di base agli elementi
+
 */
+
+let list = document.querySelector(".list")
+
+for (let i = 1; i <= 100; i++) {
+
+    console.log(i);
+    const element = `<li class="box"> ${i} </li>`
+
+    /* list.innerHTML += element */
+
+    list.insertAdjacentHTML("beforeend", element)
+}
 
 
 
